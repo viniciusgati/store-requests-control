@@ -5,13 +5,11 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.security.SecureRandom;
 
 @Entity
 @Data
@@ -32,8 +30,8 @@ public class User {
     private String encryptedPassword;
 
     public void setPassword(String plainPassword) {
-        String encyptedPassword = BCryptService.encodeStringForPassword(plainPassword);
-        setEncryptedPassword(encyptedPassword);
+        String encryptedPassword = BCryptService.encodeStringForPassword(plainPassword);
+        setEncryptedPassword(encryptedPassword);
     }
 
 }
