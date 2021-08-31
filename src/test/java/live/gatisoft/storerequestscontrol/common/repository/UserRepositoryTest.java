@@ -29,7 +29,7 @@ class UserRepositoryTest {
         userRepository.save(user);
         assertTrue(user.getId() > 0);
         userRepository.delete(user);
-        assertTrue(userRepository.count() > 0);
+        assertEquals(0, userRepository.count());
     }
 
 
