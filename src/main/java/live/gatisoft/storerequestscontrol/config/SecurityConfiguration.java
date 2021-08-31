@@ -19,7 +19,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .mvcMatchers(HttpMethod.POST,"/authentication/**").permitAll() // liberado auth em geral por motivos obvios
-//                .mvcMatchers(HttpMethod.POST, "/users").permitAll()
+                .mvcMatchers(HttpMethod.POST, "/users").permitAll()
 //                .mvcMatchers(HttpMethod.GET, "/companies").permitAll() // liberado buscar empresas e filiais (GET) sem login
 //                .mvcMatchers(HttpMethod.POST, "/hello").permitAll()
 //                .mvcMatchers(HttpMethod.GET, "/connection_test").permitAll()

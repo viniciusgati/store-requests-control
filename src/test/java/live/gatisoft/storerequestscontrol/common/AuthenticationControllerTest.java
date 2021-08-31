@@ -37,5 +37,4 @@ class AuthenticationControllerTest {
                 .andExpect(status().is(200));
     }
 
-
 }
