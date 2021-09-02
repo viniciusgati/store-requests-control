@@ -1,4 +1,4 @@
-package live.gatisoft.storerequestscontrol.common;
+package live.gatisoft.storerequestscontrol.common.controllers;
 
 import live.gatisoft.storerequestscontrol.common.repository.UserRepository;
 import live.gatisoft.storerequestscontrol.common.schema.User;

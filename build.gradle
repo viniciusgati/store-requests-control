@@ -31,6 +31,11 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.5.4'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
 	testImplementation 'org.springframework.security:spring-security-test:5.5.1'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
+	runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.2') {
+		exclude group: 'org.json', module: 'json' //provided by Android natively
+	}
 }
 
 test {
