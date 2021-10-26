@@ -24,7 +24,7 @@ public class AuthenticationController {
 
     @PostMapping("/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody UserAuthDtoRequest authData) throws Exception {
-        Optional<User> userFound = userRepository.findFirstByEmail(authData.email);
+        Optional<User> userFound = userRepository.findFirstByEmail(authData.getEmail());
         if (userFound.isPresent()) {
             User user = userFound.get();
             boolean passwordMatches = BCryptService.passwordMatches(authData.getPassword(), user.getEncryptedPassword());

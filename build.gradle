@@ -27,7 +27,6 @@ dependencies {
 	compileOnly 'org.springframework.boot:spring-boot-devtools:2.5.4'
 	runtimeOnly 'com.h2database:h2:1.4.200'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
-	annotationProcessor 'org.projectlombok:lombok:1.18.20'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.5.4'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
 	testImplementation 'org.springframework.security:spring-security-test:5.5.1'
